@@ -28,9 +28,6 @@ describe("Renders the homepage and", () => {
             expect(list).to.have.length(11);
 
             $button.click();
-            if (index!== 11) {
-                cy.wrap($button).should('have.class', 'highlighted');
-            }
         })
     })
 
