@@ -15,11 +15,9 @@ const DEFAULT_RATIO_SPAN_DIV = 7/10;
 
 function GenericToggle(props: Props) {
   const [highlightedAnswer, setHighlightedAnswer] = useState<Answer| null>(null);
-
+  const [shouldBeRearranged, setShouldBeRearranged] = useState<boolean>(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [isMobile, setIsMobile] = useState(false);
-
-  const [shouldBeRearranged, setShouldBeRearranged] = useState<boolean>(false);
 
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);

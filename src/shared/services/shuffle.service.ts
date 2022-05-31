@@ -1,3 +1,5 @@
+// used Fished-Yates shuffle algorithm.
+
 export function shuffleArray(array: any[]) {
     const newArray = [...array];
     for (let i= array.length - 1; i > 0; i--) {

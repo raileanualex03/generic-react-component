@@ -37,6 +37,7 @@
   transition: background-image 1000ms ease-in-out;
   background-image: linear-gradient(#76E0C2, #59CADA);
 }
+
 .correct-answers-background .override-button {
   color: #FFFFFF;
   background-color: #A5E7E2;

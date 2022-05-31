@@ -1,8 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import QuestionWithMultipleAnswers, {MultipleAnswer} from "./components/QuestionWithMultipleAnswers";
-import {Answer} from "./shared/models/Answer";
+import React from 'react';
+import QuestionWithMultipleAnswers from "./components/QuestionWithMultipleAnswers";
+import {MultipleAnswer} from "./shared/models/MultipleAnswer";
 
 function App() {
   const multipleAnswers: MultipleAnswer[] = [

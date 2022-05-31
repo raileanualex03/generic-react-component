@@ -1,15 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import './QuestionWithMultipleAnswers.css';
-import {Answer} from "../shared/models/Answer";
 import GenericToggle from "../shared/components/GenericToggle";
 import clsx from "clsx";
 import {shuffleArray} from "../shared/services/shuffle.service";
-
-export interface MultipleAnswer {
-    id: string;
-    answers: Answer[];
-    isCorrectResponseSelected?: boolean;
-}
+import {MultipleAnswer} from "../shared/models/MultipleAnswer";
 
 export interface Props {
   question: string;
