@@ -20,6 +20,7 @@
 .answer {
     height:100%;
     width: 100%;
+    min-height: 48px;
 
     background-color: transparent;
     border-radius: 100px;
