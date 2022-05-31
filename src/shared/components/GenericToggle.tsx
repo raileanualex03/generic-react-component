@@ -111,7 +111,7 @@ function GenericToggle(props: Props) {
           <div className="buttons">
             <div className="override-button" id={`override-button-${props.id}`} />
             {props.answers.map((answer: Answer, index) =>
-            <div className={clsx("answer", highlightedAnswer === answer ? 'highlighted' : '')} key={`${answer.id}-${props.id}`} onClick={() => onAnswerSelected(answer, index)}>
+            <div className={clsx("answer", highlightedAnswer === answer ? 'highlighted' : '', props.isDisabled ? '': 'cursor-pointer')} key={`${answer.id}-${props.id}`} onClick={() => onAnswerSelected(answer, index)}>
               <span id={`text-${props.id}-${answer.text}-${answer.id}`} className="answer-text">{answer.text} </span>
             </div>
             )}
