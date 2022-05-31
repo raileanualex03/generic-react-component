@@ -1,24 +1,95 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import QuestionWithMultipleAnswers, {MultipleAnswer} from "./components/QuestionWithMultipleAnswers";
+import {Answer} from "./shared/models/Answer";
 
 function App() {
+  const multipleAnswers: MultipleAnswer[] = [
+    {
+      id: '1',
+      answers: [{
+        id: '1',
+        text: 'Ronaldo',
+        isCorrect: true,
+      },
+        {
+          id: '2',
+          text: 'Messi',
+          isCorrect: false,
+        },
+        {
+          id: '3',
+          text: 'Messi',
+          isCorrect: false,
+        },
+        {
+          id: '4',
+          text: 'Messi',
+          isCorrect: false,
+        },
+      ],
+    },
+    {
+      id: '2',
+      answers: [{
+        id: '1',
+        text: 'Ronaldo2',
+        isCorrect: true,
+      },
+        {
+          id: '2',
+          text: 'Messi2',
+          isCorrect: false,
+        },
+      ],
+    },
+    {
+      id: '3',
+      answers: [{
+        id: '1',
+        text: 'Ronaldo3',
+        isCorrect: true,
+      },
+        {
+          id: '2',
+          text: 'Messi3',
+          isCorrect: false,
+        },
+      ],
+    },
+    {
+      id: '4',
+      answers: [{
+        id: '1',
+        text: 'Ronaldo4',
+        isCorrect: true,
+      },
+        {
+          id: '2',
+          text: 'Messi4',
+          isCorrect: false,
+        },
+        {
+          id: '3',
+          text: 'Messi3',
+          isCorrect: false,
+        }
+      ],
+    }];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{
+        width: 'full',
+        backgroundColor: 'white',
+        height: 'full',
+      }}>
+        <QuestionWithMultipleAnswers
+            question={'Who is the best player in Europe?'}
+            multipleAnswers={multipleAnswers}
+        />
+      </div>
     </div>
   );
 }
